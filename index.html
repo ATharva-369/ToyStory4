@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toy Details</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+          <!-- SweetAlert -->
+         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>        
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyBa5Q5obaLntKLYcHkPwm75mVbsh9xeoPI",
+                authDomain: "toy-story-69a12.firebaseapp.com",
+                projectId: "toy-story-69a12",
+                storageBucket: "toy-story-69a12.appspot.com",
+                messagingSenderId: "897468486274",
+                appId: "1:897468486274:web:1a8484846e9b1fbf04da9b"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+          </script>
+
+
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+        <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Sweet Alert -->
+        <script src="​https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./js/button.js"></script>
+        <script src="./js/markerHandler.js"></script>
+        <script src="./js/addMarker.js"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+        <!-- Local StyleSheet -->
+        <link rel="stylesheet" href="./style.css" type="text/css"/>
+
+
+    </head>
+
+    <body style="margin : 0px; overflow: hidden;">
+    <!-- MAIN SCENE -->
+        <a-scene id="main-scene" 
+        embedded vr-mode-ui="enabled: false"     
+        arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;debugUIEnabled: false;"
+        create-marker gesture-detector create-buttons >   
+        
+            <!-- Camera -->
+            <a-entity camera></a-entity>  
+
+            <!-- A-Assets -->
+            <a-assets>
+                <a-asset-item id="spiderman" src="./models/spiderman_toy/scene.gltf"></a-asset-item>
+            </a-assets>
+
+            <!-- A-Marker -->
+
+        </a-scene>
+
+        <!-- Button Main Div -->
+        <div id="button1"></div>
+    
+    </body>
+    
+</html>
